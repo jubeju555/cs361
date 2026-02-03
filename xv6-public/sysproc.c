@@ -97,13 +97,13 @@ int sys_getreadcount(void)
 int sys_settickets(void)
 {
   int tickets;
-  
+
   if (argint(0, &tickets) < 0)
     return -1;
-  
+
   if (tickets < 1)
     return -1;
-  
+
   myproc()->tickets = tickets;
   return 0;
 }
@@ -112,9 +112,9 @@ int sys_settickets(void)
 int sys_getpinfo(void)
 {
   struct pstat *ps;
-  
+
   if (argptr(0, (char **)&ps, sizeof(*ps)) < 0)
     return -1;
-  
+
   return getpinfo(ps);
 }
