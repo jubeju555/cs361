@@ -1,7 +1,7 @@
 #!/bin/bash
 # Quick test script for lottery scheduling
 
-cd /home/judah/cs361/xv6-public
+cd /home/judah/cs361/project-1-lottery-scheduler
 
 echo "Building xv6 with lottery scheduling..."
 make clean > /dev/null 2>&1

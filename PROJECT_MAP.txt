@@ -1,0 +1,131 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    CS361 OPERATING SYSTEMS PROJECTS                          ║
+║                        Directory Map & Quick Reference                        ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📁 ~/cs361/
+│
+├─📄 README.md ..................... START HERE - Main entry point
+├─📄 NAVIGATION.md ................. Quick navigation guide  
+├─📄 REORGANIZATION.md ............. What changed (this reorganization)
+├─📄 PROJECT_MAP.txt ............... This visual map
+│
+├─📂 docs/ ......................... ALL DOCUMENTATION HERE
+│   │
+│   ├─📂 01-lottery-scheduling/ .... ✅ PROJECT 1 (COMPLETE)
+│   │   ├─ README.md ............... Project overview & results
+│   │   ├─ implementation.md ....... Technical implementation details
+│   │   └─ quick-reference.md ...... Testing & usage guide
+│   │
+│   ├─📂 02-virtual-memory/ ........ 🔲 PROJECT 2 (TODO)
+│   │   └─ README.md ............... Getting started guide
+│   │
+│   └─📂 03-kernel-threads/ ........ 🔲 PROJECT 3 (TODO)
+│       └─ README.md ............... Getting started guide
+│
+├─📂 project-1-lottery-scheduler/ .. ✅ ACTIVE PROJECT - Working xv6
+│   ├─ pstat.h ..................... Process stats structure (NEW)
+│   ├─ proc.h, proc.c .............. Scheduler implementation (MODIFIED)
+│   ├─ lotterytest.c ............... Test program (NEW)
+│   ├─ ps.c ........................ Process viewer (NEW)
+│   ├─ test_lottery.sh ............. Quick test script (NEW)
+│   ├─ [all xv6 source files] ...... Original + modifications
+│   └─ Makefile .................... Build configuration
+│
+├─📂 project-2-virtual-memory/ ..... 🔲 FUTURE PROJECT
+│   └─ (will be created by copying project-1)
+│
+├─📂 project-3-kernel-threads/ ..... 🔲 FUTURE PROJECT
+│   └─ (will be created by copying project-2)
+│
+└─📂 ostep-projects/ ............... 📖 REFERENCE MATERIALS
+    ├─ scheduling-xv6-lottery/ ..... Project 1 specification
+    ├─ vm-xv6-intro/ ............... Project 2 specification
+    ├─ concurrency-xv6-threads/ .... Project 3 specification
+    └─ [other projects] ............ Additional reference materials
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                              QUICK COMMANDS                                   ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+Navigation:
+  cd ~/cs361                          # Go to project root
+  cd ~/cs361/docs                     # Go to documentation
+  cd ~/cs361/project-1-lottery-scheduler    # Go to Project 1 code
+
+Documentation:
+  cat ~/cs361/README.md               # Main overview
+  cat ~/cs361/docs/01-lottery-scheduling/README.md        # Project 1 overview
+  cat ~/cs361/docs/01-lottery-scheduling/quick-reference.md  # Testing guide
+
+Testing Project 1:
+  cd ~/cs361/project-1-lottery-scheduler
+  ./test_lottery.sh                   # Automated test
+  make qemu-nox                       # Manual test
+
+Building:
+  cd ~/cs361/project-1-lottery-scheduler
+  make clean && make && make fs.img   # Full rebuild
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                            PROJECT STATUS                                     ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+✅ Project 1: Lottery Scheduling
+   Status: COMPLETE
+   Location: project-1-lottery-scheduler/
+   Docs: docs/01-lottery-scheduling/
+   
+🔲 Project 2: Virtual Memory  
+   Status: TODO
+   Spec: ostep-projects/vm-xv6-intro/
+   Docs: docs/02-virtual-memory/
+   
+🔲 Project 3: Kernel Threads
+   Status: TODO  
+   Spec: ostep-projects/concurrency-xv6-threads/
+   Docs: docs/03-kernel-threads/
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                          REORGANIZATION SUMMARY                               ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+What Changed:
+  xv6-public/              → project-1-lottery-scheduler/
+  Scattered docs           → docs/01-lottery-scheduling/
+  PROJECT_STATUS.md        → README.md (updated)
+  
+What's New:
+  ✨ Centralized documentation in docs/
+  ✨ Clear project naming (project-1, project-2, project-3)
+  ✨ Navigation guides (NAVIGATION.md, this file)
+  ✨ Future project placeholders
+  
+What Still Works:
+  ✅ All builds compile successfully
+  ✅ Test programs work correctly
+  ✅ Documentation is complete and organized
+  ✅ Ready for next projects
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                              NEXT STEPS                                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+1. Familiarize: Navigate the new structure
+   → cd ~/cs361 && cat README.md
+
+2. Test: Verify Project 1 still works
+   → cd ~/cs361/project-1-lottery-scheduler && ./test_lottery.sh
+
+3. Learn: Read the documentation
+   → cat ~/cs361/docs/01-lottery-scheduling/README.md
+
+4. Next: Start Project 2 when ready
+   → cat ~/cs361/docs/02-virtual-memory/README.md
+   → cat ~/cs361/ostep-projects/vm-xv6-intro/README.md
+
+═══════════════════════════════════════════════════════════════════════════════
+
+Last Updated: February 2, 2026
+Reorganized: February 2, 2026
+Status: ✅ Complete and verified
