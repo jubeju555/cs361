@@ -6,6 +6,7 @@
 #include "memlayout.h"
 #include "mmu.h"
 #include "proc.h"
+#include "pstat.h"
 
 int sys_fork(void)
 {
@@ -90,4 +91,30 @@ extern int readcount;
 int sys_getreadcount(void)
 {
   return readcount;
+}
+
+// Set the number of tickets for the calling process
+int sys_settickets(void)
+{
+  int tickets;
+  
+  if (argint(0, &tickets) < 0)
+    return -1;
+  
+  if (tickets < 1)
+    return -1;
+  
+  myproc()->tickets = tickets;
+  return 0;
+}
+
+// Get process information for lottery scheduling
+int sys_getpinfo(void)
+{
+  struct pstat *ps;
+  
+  if (argptr(0, (char **)&ps, sizeof(*ps)) < 0)
+    return -1;
+  
+  return getpinfo(ps);
 }

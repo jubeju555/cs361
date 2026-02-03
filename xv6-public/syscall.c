@@ -103,6 +103,8 @@ extern int sys_wait(void);
 extern int sys_write(void);
 extern int sys_uptime(void);
 extern int sys_getreadcount(void);
+extern int sys_settickets(void);
+extern int sys_getpinfo(void);
 
 static int (*syscalls[])(void) = {
     [SYS_fork] sys_fork,
@@ -127,6 +129,8 @@ static int (*syscalls[])(void) = {
     [SYS_mkdir] sys_mkdir,
     [SYS_close] sys_close,
     [SYS_getreadcount] sys_getreadcount,
+    [SYS_settickets] sys_settickets,
+    [SYS_getpinfo] sys_getpinfo,
 };
 
 void syscall(void)
