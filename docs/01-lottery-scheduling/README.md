@@ -10,6 +10,7 @@ This project implements a **lottery scheduler** for xv6, replacing the default r
 
 ## Quick Links
 
+- **[Code Walkthrough](code-walkthrough.md)** - 🎓 Step-by-step code explanation (START HERE)
 - **[Implementation Details](implementation.md)** - Full technical documentation
 - **[Quick Reference](quick-reference.md)** - Testing and usage guide
 - **[Source Code](../../project-1-lottery-scheduler/)** - Working xv6 implementation
