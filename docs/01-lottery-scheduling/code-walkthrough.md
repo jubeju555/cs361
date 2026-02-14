@@ -24,15 +24,15 @@ This guide walks through every file modification, showing the actual code change
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    USER SPACE                                │
+│                    USER SPACE                               │
 ├─────────────────────────────────────────────────────────────┤
-│  Application calls:                                          │
+│  Application calls:                                         │
 │  • settickets(30)  ──────────────┐                         │
 │  • getpinfo(&ps)   ──────────┐   │                         │
 └──────────────────────────────┼───┼─────────────────────────┘
                                │   │
 ┌──────────────────────────────┼───┼─────────────────────────┐
-│                    SYSTEM CALL INTERFACE                     │
+│                    SYSTEM CALL INTERFACE                   │
 ├──────────────────────────────┼───┼─────────────────────────┤
 │  usys.S: SYSCALL stubs       │   │                         │
 │  syscall.h: #define numbers  │   │                         │
